@@ -5,11 +5,53 @@ import { Italianno } from "next/font/google";
 import { BadgeCheck } from 'lucide-react';
 import Link from 'next/link';
 import Slider from './slider';
+import { Metadata } from "next";
 
 const italianno = Italianno({
     subsets: ['latin'],
     weight: '400',
 });
+
+export const metadata: Metadata = {
+    title: "Brand Collaborations - Animated Reels & Custom Illustrations | Kalaa Bliss",
+    description: "Partner with Kalaa Bliss for authentic brand collaborations. Offering animated reels, illustrated stories, brand illustrations, and animated posts. Trusted by Bakingo, IBA, Garnier, and more.",
+    keywords: ["brand collaboration", "animated reels", "custom illustrations", "brand storytelling", "social media content", "Instagram animation", "TikTok content", "brand partnerships", "illustrator for hire", "animator for brands"],
+    authors: [{ name: "Khushbu Gupta" }],
+    creator: "Khushbu Gupta",
+    publisher: "Kalaa Bliss",
+    openGraph: {
+        title: "Brand Collaborations - Let's Create Something Memorable",
+        description: "From animated reels to custom illustrations, partner with brands who value authenticity, quality, and visual storytelling that makes an impact.",
+        type: "website",
+        locale: "en_US",
+        siteName: "Kalaa Bliss",
+        images: [
+            {
+                url: "/c1.png",
+                width: 400,
+                height: 400,
+                alt: "Brand collaboration illustration by Kalaa Bliss",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Brand Collaborations - Animated Reels & Custom Illustrations",
+        description: "Partner with Kalaa Bliss for authentic visual storytelling. Trusted by major brands for animated content and custom illustrations.",
+        images: ["/c1.png"],
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
+};
 
 export default function Collabration() {
     // Single slider with 5 images
@@ -24,9 +66,9 @@ export default function Collabration() {
                     <p className="uppercase text-gray-600">
                         For Brands & Agencies
                     </p>
-                    <h1 className='text-4xl md:text-5xl text-start'>
+                    <h2 className='text-4xl md:text-5xl text-start'>
                         Let&apos;s create something your audience <br /> will remember
-                    </h1>
+                    </h2>
 
                     <p className='text-gray-800 max-w-2xl text-xl mt-4'>
                         From animated reels to custom illustrations, I partner with brands who value authenticity, quality, and visual storytelling that makes an impact.
@@ -35,7 +77,6 @@ export default function Collabration() {
                     <div className='flex gap-2'>
                         <Link
                             className="bg-[#BD7B5C] text-white px-6 py-3 rounded-full hover:bg-[#BD7B6C] transition duration-300 cursor-pointer "
-
                             href="/connect"
                         >
                             Get in Touch
@@ -55,7 +96,8 @@ export default function Collabration() {
                         src="/c1.png"
                         width={400}
                         height={400}
-                        alt="collaboration-img"
+                        alt="Brand collaboration creative illustration showcasing partnership opportunities"
+                        priority
                     />
                 </div>
             </section>
@@ -65,9 +107,9 @@ export default function Collabration() {
                     <p className='uppercase text-gray-600'>
                         Collaboration Formats
                     </p>
-                    <h2 className='text-4xl' >
+                    <h3 className='text-4xl' >
                         Choose the format that fits your needs
-                    </h2>
+                    </h3>
                     <p className='text-gray-600 max-w-4xl'>
                         I offer a variety of collaboration formats to suit your brand&apos;s needs. Whether you&apos;re looking for a one-time project or an ongoing partnership, I&apos;m here to help bring your vision to life through my unique artistic style.
                     </p>
@@ -77,11 +119,11 @@ export default function Collabration() {
                                 src="/work/a.png"
                                 height={283}
                                 width={364}
-                                alt="collaboration-format"
+                                alt="Animated reels example - custom-crafted social media animation"
                                 className="rounded-lg"
                             />
                             <div className='max-w-xl text-start flex flex-col gap-4'>
-                                <h3 className='text-4xl mb-2'>Animated Reels</h3>
+                                <h4 className='text-4xl mb-2'>Animated Reels</h4>
 
                                 <p className='text-gray-600 max-w-2xl '>
                                     Custom-crafted animated content designed to capture attention in crowded feeds. Perfect for product launches, brand storytelling, and campaign highlights.
@@ -94,16 +136,16 @@ export default function Collabration() {
 
                                     <div className='grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 mt-2 '>
                                         <div className='flex items-center gap-2'>
-                                            <BadgeCheck className='text-[#BD7B5C]' />
+                                            <BadgeCheck className='text-[#BD7B5C]' aria-hidden="true" />
                                             <span>15-60 second animations</span>
                                         </div><div className='flex items-center gap-2'>
-                                            <BadgeCheck className='text-[#BD7B5C]' />
+                                            <BadgeCheck className='text-[#BD7B5C]' aria-hidden="true" />
                                             <span>Optimized for Instagram/TikTok</span>
                                         </div><div className='flex items-center gap-2'>
-                                            <BadgeCheck className='text-[#BD7B5C]' />
+                                            <BadgeCheck className='text-[#BD7B5C]' aria-hidden="true" />
                                             <span>Multiple format exports</span>
                                         </div><div className='flex items-center gap-2'>
-                                            <BadgeCheck className='text-[#BD7B5C]' />
+                                            <BadgeCheck className='text-[#BD7B5C]' aria-hidden="true" />
                                             <span>2-3 revision rounds</span>
                                         </div>
                                     </div>
@@ -115,11 +157,11 @@ export default function Collabration() {
                                 src="/work/b.png"
                                 height={283}
                                 width={364}
-                                alt="collaboration-format"
+                                alt="Illustrated stories example - dynamic visual narrative sequence"
                                 className="rounded-lg"
                             />
                             <div className='max-w-xl text-start flex flex-col gap-4'>
-                                <h3 className='text-4xl mb-2'>Illustrated Stories</h3>
+                                <h4 className='text-4xl mb-2'>Illustrated Stories</h4>
 
                                 <p className='text-gray-600 max-w-2xl '>
                                     Dynamic story sequences that engage followers with visual narratives. Ideal for ongoing brand presence and audience connection.
@@ -132,16 +174,16 @@ export default function Collabration() {
 
                                     <div className='grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 mt-2 '>
                                         <div className='flex items-center gap-2'>
-                                            <BadgeCheck className='text-[#BD7B5C]' />
+                                            <BadgeCheck className='text-[#BD7B5C]' aria-hidden="true" />
                                             <span>5-10 story frames</span>
                                         </div><div className='flex items-center gap-2'>
-                                            <BadgeCheck className='text-[#BD7B5C]' />
+                                            <BadgeCheck className='text-[#BD7B5C]' aria-hidden="true" />
                                             <span>Interactive elements</span>
                                         </div><div className='flex items-center gap-2'>
-                                            <BadgeCheck className='text-[#BD7B5C]' />
+                                            <BadgeCheck className='text-[#BD7B5C]' aria-hidden="true" />
                                             <span>Swipe-up ready</span>
                                         </div><div className='flex items-center gap-2'>
-                                            <BadgeCheck className='text-[#BD7B5C]' />
+                                            <BadgeCheck className='text-[#BD7B5C]' aria-hidden="true" />
                                             <span>Template options</span>
                                         </div>
                                     </div>
@@ -153,12 +195,12 @@ export default function Collabration() {
                                 src="/work/c.png"
                                 height={283}
                                 width={364}
-                                alt="collaboration-format"
+                                alt="Brand illustrations example - custom bespoke artwork for brand identity"
                                 className="rounded-lg"
                             />
                             <div className='max-w-xl text-start flex flex-col gap-4'>
-                                <h3 className='text-4xl mb-2'>
-                                    Brand Illustrations</h3>
+                                <h4 className='text-4xl mb-2'>
+                                    Brand Illustrations</h4>
 
                                 <p className='text-gray-600 max-w-2xl '>
                                     Bespoke illustrations that capture your brand&apos;s unique identity. From character design to full campaign visuals.
@@ -171,16 +213,16 @@ export default function Collabration() {
 
                                     <div className='grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 mt-2 '>
                                         <div className='flex items-center gap-2'>
-                                            <BadgeCheck className='text-[#BD7B5C]' />
+                                            <BadgeCheck className='text-[#BD7B5C]' aria-hidden="true" />
                                             <span>Custom artwork</span>
                                         </div><div className='flex items-center gap-2'>
-                                            <BadgeCheck className='text-[#BD7B5C]' />
+                                            <BadgeCheck className='text-[#BD7B5C]' aria-hidden="true" />
                                             <span>Style guide included</span>
                                         </div><div className='flex items-center gap-2'>
-                                            <BadgeCheck className='text-[#BD7B5C]' />
+                                            <BadgeCheck className='text-[#BD7B5C]' aria-hidden="true" />
                                             <span>High-res files</span>
                                         </div><div className='flex items-center gap-2'>
-                                            <BadgeCheck className='text-[#BD7B5C]' />
+                                            <BadgeCheck className='text-[#BD7B5C]' aria-hidden="true" />
                                             <span>Usage rights</span>
                                         </div>
                                     </div>
@@ -192,11 +234,11 @@ export default function Collabration() {
                                 src="/work/d.png"
                                 height={283}
                                 width={364}
-                                alt="collaboration-format"
+                                alt="Animated posts example - engaging social media post animation"
                                 className="rounded-lg"
                             />
                             <div className='max-w-xl text-start flex flex-col gap-4'>
-                                <h3 className='text-4xl mb-2'>Animated Posts</h3>
+                                <h4 className='text-4xl mb-2'>Animated Posts</h4>
 
                                 <p className='text-gray-600 max-w-2xl '>
                                     Engaging animated posts that stand out in feeds. Great for announcements, promotions, and enhancing brand visibility.
@@ -209,16 +251,16 @@ export default function Collabration() {
 
                                     <div className='grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 mt-2 '>
                                         <div className='flex items-center gap-2'>
-                                            <BadgeCheck className='text-[#BD7B5C]' />
+                                            <BadgeCheck className='text-[#BD7B5C]' aria-hidden="true" />
                                             <span>Custom artwork</span>
                                         </div><div className='flex items-center gap-2'>
-                                            <BadgeCheck className='text-[#BD7B5C]' />
+                                            <BadgeCheck className='text-[#BD7B5C]' aria-hidden="true" />
                                             <span>Style guide included</span>
                                         </div><div className='flex items-center gap-2'>
-                                            <BadgeCheck className='text-[#BD7B5C]' />
+                                            <BadgeCheck className='text-[#BD7B5C]' aria-hidden="true" />
                                             <span>Multiple format exports</span>
                                         </div><div className='flex items-center gap-2'>
-                                            <BadgeCheck className='text-[#BD7B5C]' />
+                                            <BadgeCheck className='text-[#BD7B5C]' aria-hidden="true" />
                                             <span>2-3 revision rounds</span>
                                         </div>
                                     </div>
@@ -235,30 +277,30 @@ export default function Collabration() {
                     <p className='uppercase text-gray-600'>
                         Why Partner With Me
                     </p>
-                    <h2 className='text-3xl md:text-4xl'>
+                    <h3 className='text-3xl md:text-4xl'>
                         What you gain from collaboration
-                    </h2>
+                    </h3>
 
                     <div className='mt-12 flex flex-col md:flex-row justify-center items-start gap-4 md:gap-8 flex-wrap'>
                         <div className='text-start flex flex-col gap-4 bg-gray-400/10 p-6 rounded-lg max-w-xl '>
                             <span className='text-[#BD7B5C] text-lg'>01</span>
-                            <h3 className='text-xl'>Authentic Engagement</h3>
+                            <h4 className='text-xl'>Authentic Engagement</h4>
                             <p className='text-gray-600 max-w-2xl text-sm'>Content that resonates with audiences because it&apos;s crafted with genuine artistic vision, not generic templates.</p>
 
                         </div>
                         <div className='text-start flex flex-col gap-4 bg-gray-400/10 p-6 rounded-lg max-w-xl'>
                             <span className='text-[#BD7B5C] text-lg'>02</span>
-                            <h3 className='text-xl'>Storytelling Impact</h3>
+                            <h4 className='text-xl'>Storytelling Impact</h4>
                             <p className='text-gray-600 max-w-2xl text-sm'>Visuals that don&apos;t just look good—they communicate your brand&apos;s story in ways that create lasting impressions.</p>
 
                         </div><div className='text-start flex flex-col gap-4 bg-gray-400/10 p-6 rounded-lg max-w-xl'>
                             <span className='text-[#BD7B5C] text-lg'>03</span>
-                            <h3 className='text-xl'>Strategic Alignment</h3>
+                            <h4 className='text-xl'>Strategic Alignment</h4>
                             <p className='text-gray-600 max-w-2xl text-sm'>Every piece is created with your business objectives in mind, balancing creativity with commercial effectiveness.</p>
 
                         </div><div className='text-start flex flex-col gap-4 bg-gray-400/10 p-6 rounded-lg max-w-xl'>
                             <span className='text-[#BD7B5C] text-lg'>04</span>
-                            <h3 className='text-xl'>Audience Connection</h3>
+                            <h4 className='text-xl'>Audience Connection</h4>
                             <p className='text-gray-600 max-w-2xl text-sm'>Leverage my understanding of social media dynamics and audience psychology to maximize content performance.</p>
 
                         </div>
@@ -274,9 +316,9 @@ export default function Collabration() {
                     <p className='uppercase text-gray-600'>
                         Teams that trusted my vision
                     </p>
-                    <h2 className='text-3xl md:text-4xl mb-2' >
+                    <h3 className='text-3xl md:text-4xl mb-2' >
                         Brands I&apos;ve Worked With
-                    </h2>
+                    </h3>
 
                 </div>
             </section>

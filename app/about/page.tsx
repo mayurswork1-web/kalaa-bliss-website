@@ -1,10 +1,53 @@
 import Image from 'next/image'
 import { Italianno } from "next/font/google";
+import { Metadata } from "next";
 
 const italianno = Italianno({
     subsets: ['latin'],
     weight: '400',
 });
+
+export const metadata: Metadata = {
+    title: "About Khushbu Gupta - Kalaa Bliss | Animator & Illustrator",
+    description: "Meet Khushbu Gupta, your own Kalaa Bliss. Professional animator and illustrator bringing joy through art, emotion, and animation. Specializing in visual narratives and brand collaborations.",
+    keywords: ["Khushbu Gupta", "Kalaa Bliss", "animator", "illustrator", "digital animation", "traditional illustration", "brand collaborations", "visual storytelling"],
+    authors: [{ name: "Khushbu Gupta" }],
+    creator: "Khushbu Gupta",
+    publisher: "Khushbu Gupta",
+    openGraph: {
+        title: "About Khushbu Gupta - Kalaa Bliss | Animator & Illustrator",
+        description: "Professional animator and illustrator bringing joy through art, emotion, and animation. Crafting visual narratives that resonate with audiences.",
+        type: "profile",
+        locale: "en_US",
+        siteName: "Kalaa Bliss",
+        images: [
+            {
+                url: "/she.png",
+                width: 331,
+                height: 441,
+                alt: "Khushbu Gupta - Animator and Illustrator portrait",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "About Khushbu Gupta - Kalaa Bliss",
+        description: "Professional animator and illustrator bringing joy through art, emotion, and animation.",
+        images: ["/she.png"],
+        creator: "@yourtwitterhandle",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
+};
 
 export default function About() {
     return (
@@ -19,10 +62,11 @@ export default function About() {
                 <div className='bg-pink-300 py-2 px-6 rounded-3xl'>
                     <Image
                         src="/she.png"
-                        alt="she-img"
+                        alt="Khushbu Gupta - Professional animator and illustrator portrait"
                         width={331}
                         height={441}
                         className="mx-auto"
+                        priority
                     />
                     <span className="relative left-35 md:left-50 top-4 text-white font-semibold bg-[#BD7B5C] py-2 px-3 rounded-md z-50">
                         Animator & Illustrator
