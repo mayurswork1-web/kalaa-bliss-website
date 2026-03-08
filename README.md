@@ -55,7 +55,7 @@ Custom animated reels designed for social media.
 
 **Includes**
 - 15–60 second animations  
-- Instagram / TikTok optimized  
+- Instagram optimized  
 - Multiple export formats  
 - 2–3 revision rounds  
 
